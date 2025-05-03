@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-clr: green;
+}
+
+h1, h3, #login-container{
+    text-align: center;
+}
+
+h1{
+    margin: 5rem auto;
+    color: var(--primary-clr);
+    font-size:48px;
+}
+
+/* Login Page */
+
+#login-container{
+    margin: 5rem;
+}
+
+.login-field{
+    min-width: 750px;
+    margin: 2rem;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Login Page */
+
+.navbar{
+    min-width: 200px;
+    min-height: 100vh;
+    border-right: 2px solid black;
+}
+
+ul{
+    padding: 2rem 5rem 0 5rem;
+    list-style-type: none;
+    color: var(--primary-clr);
+}
+
+ul:hover{
+    cursor: pointer;
+}
+
+li{
+    padding: 0.75rem 0;
+}
+
+li a{
+    color: var(--primary-clr);
+    text-decoration: none;
+    font-size: 28px;
+}
+
+li a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.navbar img{
+    border: 2px solid black;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    
+}
+
+/* WebPage Body */
+
+.main-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#workout-list{
+    margin-top: 2rem;
+    border: 2px solid black;
+    border-radius: 2%;
+}
+
+#workout-list li{
+    align-self: center;
+    font-size: 28px;
+}
+
+#workout-list div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5rem;
+}
+
+#workout-list img{
+    max-width: 400px;
+    max-height: auto;
+}
+
+#workout-list div div{
+    display:flex;
+    
+}
+
