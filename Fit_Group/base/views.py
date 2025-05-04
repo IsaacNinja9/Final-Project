@@ -23,7 +23,7 @@ def loginPage(request):
     
         if student is None:
 
-            messages.error(request,'Invalid Username')
+            messages.error(request,'Invalid Password')
             return redirect('/login/')
         else:
 
@@ -51,8 +51,7 @@ def registrationPage(request):
         student.set_password(password)
         student.save()
 
-        messages.info(request,"Welcome future olympian!")
-        return redirect('/home/')
+        return redirect('/login/')
     
     return render(request,'register.html')
 
