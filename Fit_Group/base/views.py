@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from .forms import RegimentForm
 
 # Create your views here.
 
@@ -71,4 +72,6 @@ def leaderboard(request):
     return render(request,'leaderboard.html')
 
 def training_options(request):
-    return render(request, 'training_options.html')
+    context = {}
+    context['form'] = RegimentForm()
+    return render(request, 'training_options.html',context)

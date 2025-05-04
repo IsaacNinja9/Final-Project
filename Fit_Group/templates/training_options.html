@@ -1,4 +1,7 @@
 {% include 'navbar.html' %}
 
-<h1>Sorry, u aint sigma yet...</h1>
-<a href="https://www.youtube.com/watch?v=E4WlUXrJgy4">Click here to learn how to be a sigma</a>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
