@@ -9,5 +9,6 @@ urlpatterns = [
     path("settings/",views.settings,name="settings"),
     path("groups/",views.groups,name="groups"),
     path("leaderboard/",views.leaderboard,name="leaderboard"),
-    path('training_options/',views.training_options,name="training_room")
+    path('training_options/',views.training_options,name="training_room"),
+    path("home/",views.home,name="home")
 ]

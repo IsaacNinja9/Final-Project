@@ -38,11 +38,11 @@ def registrationPage(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        student = User.objects.Filter(username=username)
+        student = User.objects.filter(username=username)
 
         if student.exists():
-            messages.info(request, "Username already taken!")
-            return redirect("/register/")
+            messages.error(request, "Username already taken!")
+            return redirect("/registration/")
         
         student = User.objects.create_user(
             username=username
@@ -52,7 +52,7 @@ def registrationPage(request):
         student.save()
 
         messages.info(request,"Welcome future olympian!")
-        return redirect('/register/')
+        return redirect('/home/')
     
     return render(request,'register.html')
 
